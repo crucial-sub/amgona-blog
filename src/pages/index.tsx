@@ -1,7 +1,12 @@
-import React from "react";
+import Router from 'next/router'
+import { useEffect, useLayoutEffect } from 'react'
 
 const Home = () => {
-  return <div>Home</div>;
-};
+  useEffect(() => {
+    Router.replace('/dev')
+  }, [])
 
-export default Home;
+  return <></>
+}
+
+export default Home
