@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRef } from 'react'
 
@@ -43,7 +42,7 @@ const Header = () => {
             className={'rounded-lg p-2 hover:bg-gray-700 '}
             onClick={handleClickHamburger}
           >
-            <Image
+            <img
               src={'/images/hamburger-white.svg'}
               alt="hamburger"
               width={18}
