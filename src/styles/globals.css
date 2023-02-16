@@ -25,7 +25,7 @@
     color: #fff;
   }
 
-  h2 {
+  .post h2 {
     font-size: 26px;
     font-weight: 600;
 
@@ -39,13 +39,13 @@
     margin: 1.2em 0 0.4em 0;
   }
 
-  img {
+  .post img {
     width: 100%;
     border-radius: 12px;
     margin: 36px 0px;
   }
 
-  p {
+  .post p {
     font-size: 18px;
     font-weight: 500;
     display: block;
@@ -58,7 +58,7 @@
     overflow-wrap: break-word;
   }
 
-  hr {
+  .post hr {
     height: 1px;
     margin-top: 35px;
     margin-bottom: 15px;
@@ -66,7 +66,7 @@
     border: none;
   }
 
-  blockquote {
+  .post blockquote {
     margin: 30px 0px;
     padding: 16px;
     background-color: #1f2937;
@@ -74,12 +74,12 @@
     border-left: 5px solid #1ae9df;
   }
 
-  blockquote > p {
+  .post blockquote > p {
     font-style: italic;
     color: #fff;
   }
 
-  li {
+  .post li {
     color: #bdc5d2;
     margin: 18px 0px;
 
@@ -87,13 +87,13 @@
     font-weight: 500;
   }
 
-  li > strong {
+  .post li > strong {
     font-size: 20px;
     line-height: 2;
     color: #48996b;
   }
 
-  li > img {
+  .post li > img {
     width: 15px;
     height: 15px;
   }
