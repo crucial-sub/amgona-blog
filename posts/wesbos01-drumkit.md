@@ -6,15 +6,15 @@ excerpt: '키보드로 오디오를 재생하는 드럼 키트를 만들어보�
 thumbnail: '/images/wesbos01-drumkit.png'
 ---
 
-> 💡 키보드 중의 어떤 키를 눌렀을 때 해당 키와 데이터 값이 같은 audio를 찾아 재생시키는 drum kit다.\
+> 💡 키보드 중의 어떤 키를 눌렀을 때 해당 키와 데이터 값이 같은 audio를 찾아 재생시키는 drum kit다.
 
 ## 로직
 
-1. `window`에 키보드 이벤트로 함수 호출하도록 설정 (`addEventListener`, `keydown`)
-2. 키를 눌러 해당 키와 데이터 값이 같은 audio 재생 (`keyCode`, `data-attribute`, `play()`)
-3. 연타 가능하도록 설정 (`currentTime`)
-4. 키를 누른것을 화면에 표시 (`classList.add`)
-5. transition이 끝나면 다시 원래대로 돌아가도록 설정 (`forEach`, `transitionend`, `classList.remove`)
+**1.** `window`에 키보드 이벤트로 함수 호출하도록 설정 (`addEventListener`, `keydown`) </br>
+**2.** 키를 눌러 해당 키와 데이터 값이 같은 audio 재생 (`keyCode`, `data-attribute`, `play()`) </br>
+**3.** 연타 가능하도록 설정 (`currentTime`) </br>
+**4.** 키를 누른것을 화면에 표시 (`classList.add`) </br>
+**5.** transition이 끝나면 다시 원래대로 돌아가도록 설정 (`forEach`, `transitionend`, `classList.remove`) </br>
 
 ---
 
@@ -73,11 +73,9 @@ JavaScript에선 `dataset`객체를 활용하여 앞의 `data-`를 빼고 `datas
 const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
 ```
 
-```
-❓ 템플릿 문자열(Template literals) :
-따옴표("") 대신 백틱(``)을 사용해 문자열 내에서 변수나 함수를 표현할 수 있는 기능으로
-표현식을 $와 중괄호{ }에 포함시켜 표현한다.
-```
+> ❓ 템플릿 문자열(Template literals) : </br>
+> 따옴표("") 대신 백틱(``)을 사용해 문자열 내에서 변수나 함수를 표현할 수 있는 기능으로
+> 표현식을 $와 중괄호{ }에 포함시켜 표현한다.
 
 여기서는 정적인 data-key 값을 가진 audio를 찾는게 아니라 키를 누를때마다 유동적으로 해당 키와 데이터값이 같은 audio를 찾아내야하기 때문에 템플릿 문자열을 사용하였다.
 
