@@ -1,9 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import { marked } from 'marked'
+import { useLayoutEffect } from 'react'
 import { PostDetailType } from 'utils/types'
+import Prism from '../../utils/prism'
 
 const PostContent = ({ frontmatter, content }: PostDetailType) => {
   const { title, date, thumbnail } = frontmatter
+
+  useLayoutEffect(() => {
+    Prism.highlightAll()
+  }, [])
 
   return (
     <>
