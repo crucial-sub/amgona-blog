@@ -3,3 +3,8 @@ export interface PostDetailType {
   slug?: string
   content: string
 }
+
+export interface PostListType {
+  title: string
+  posts: PostDetailType[]
+}

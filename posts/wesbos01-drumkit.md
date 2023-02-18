@@ -10,11 +10,11 @@ thumbnail: '/images/wesbos01-drumkit.png'
 
 ## 로직
 
-**1.** `window`에 키보드 이벤트로 함수 호출하도록 설정 (`addEventListener`, `keydown`) </br>
-**2.** 키를 눌러 해당 키와 데이터 값이 같은 audio 재생 (`keyCode`, `data-attribute`, `play()`) </br>
-**3.** 연타 가능하도록 설정 (`currentTime`) </br>
-**4.** 키를 누른것을 화면에 표시 (`classList.add`) </br>
-**5.** transition이 끝나면 다시 원래대로 돌아가도록 설정 (`forEach`, `transitionend`, `classList.remove`) </br>
+- **1.** `window`에 키보드 이벤트로 함수 호출하도록 설정 (`addEventListener`, `keydown`) </br>
+- **2.** 키를 눌러 해당 키와 데이터 값이 같은 audio 재생 (`keyCode`, `data-attribute`, `play()`) </br>
+- **3.** 연타 가능하도록 설정 (`currentTime`) </br>
+- **4.** 키를 누른것을 화면에 표시 (`classList.add`) </br>
+- **5.** transition이 끝나면 다시 원래대로 돌아가도록 설정 (`forEach`, `transitionend`, `classList.remove`) </br>
 
 ---
 
