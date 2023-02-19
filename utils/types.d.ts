@@ -1,3 +1,11 @@
+export interface FrontmatterType {
+  title: string
+  date: string
+  category: string
+  excerpt: string
+  thumbnail: string
+}
+
 export interface PostDetailType {
   frontmatter: FrontmatterType
   slug?: string
@@ -7,4 +15,5 @@ export interface PostDetailType {
 export interface PostListType {
   title: string
   posts: PostDetailType[]
+  categories: string[]
 }

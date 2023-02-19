@@ -5,10 +5,10 @@ import path from 'path'
 import { sortByDate } from 'utils'
 import { PostListType } from 'utils/types'
 
-const DevPage = ({ posts }: PostListType) => {
+const DevPage = ({ posts, categories }: PostListType) => {
   return (
     <>
-      <Posts title={'Dev'} posts={posts} />
+      <Posts title={'Dev'} posts={posts} categories={categories} />
     </>
   )
 }
@@ -32,9 +32,15 @@ export const getStaticProps = async () => {
     }
   })
 
+  const defaultCategory = posts.length ? ['All'] : null
+  const categorySet = new Set(defaultCategory)
+
+  posts.forEach(post => categorySet.add(post.frontmatter.category ?? null))
+
   return {
     props: {
       posts: posts.sort(sortByDate),
+      categories: Array.from(categorySet),
     },
   }
 }

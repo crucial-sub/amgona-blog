@@ -1,7 +1,7 @@
 ---
-title: '[JavaScript] 02. Clock'
+title: '[wesbos30] 02. Clock'
 date: '2023.02.17'
-category: 'Wesbos30'
+category: 'wesbos30'
 excerpt: 'CSS와 JavaScript를 활용하여 간단한 아날로그 시계를 만들어보자!'
 thumbnail: '/images/wesbos02-clock.png'
 ---

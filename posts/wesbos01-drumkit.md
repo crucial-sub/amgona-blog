@@ -1,7 +1,7 @@
 ---
-title: '[JavaScript] 01. Drum kit'
+title: '[wesbos30] 01. Drum kit'
 date: '2023.02.13'
-category: 'Wesbos30'
+category: 'wesbos30'
 excerpt: '키보드로 오디오를 재생하는 드럼 키트를 만들어보자!'
 thumbnail: '/images/wesbos01-drumkit.png'
 ---
