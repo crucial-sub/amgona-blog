@@ -2,6 +2,7 @@ import { memo, useState } from 'react'
 import { PostListType } from 'utils/types'
 import CategoryButton from './CategoryButton'
 import PostList from './PostList'
+import PostsNotFound from './PostsNotFound'
 
 const Posts = ({ title, posts, categories }: PostListType) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
@@ -14,6 +15,8 @@ const Posts = ({ title, posts, categories }: PostListType) => {
   const handleClickCategory = (category: string) => {
     setSelectedCategory(category)
   }
+
+  if (!posts.length) return <PostsNotFound />
 
   return (
     <div
