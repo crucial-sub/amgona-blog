@@ -20,7 +20,7 @@ thumbnail: '/images/wesbos01-drumkit.png'
 
 ## 코딩 과정
 
-### **1. window에 키보드 이벤트로 함수 호출하도록 설정**
+### 1. window에 키보드 이벤트로 함수 호출하도록 설정
 
 ```jsx
 //EventTarget.addEventListener("이벤트", 함수);
@@ -28,7 +28,7 @@ window.addEventListener('keydown', playAudio)
 window.addEventListener('keydown', keydownAnimation)
 ```
 
-### addEventListener()
+#### addEventListener()
 
 addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정한다.
 
@@ -37,7 +37,7 @@ addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때�
 
 ![](https://user-images.githubusercontent.com/87363422/155992024-b431ab70-100a-4ec8-93f4-f2d2dda8ce00.png)
 
-### **2. 키를 눌러 해당 키와 데이터 값이 같은 audio 재생**
+### 2. 키를 눌러 해당 키와 데이터 값이 같은 audio 재생
 
 ```jsx
 function playAudio(event) {
@@ -47,13 +47,13 @@ function playAudio(event) {
 }
 ```
 
-### keyCode
+#### keyCode
 
 JavaScript에서 keydown, keypress, keyup 등의 키보드 이벤트를 받았을 때 키 값을 구별할 수 있는 코드
 
 [http://keycode.info/](http://keycode.info/)에서 확인가능하다
 
-### data-attribute
+#### data-attribute
 
 화면에 안 보이게 글이나 추가 정보를 element에 담아 놓을 수 있는 속성
 
@@ -82,7 +82,7 @@ const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`)
 눌린 키의 키코드(event.keycode)를 변수로써 ${ }에 넣어
 keydown event가 일어날 때마다 html내의 audio중에서 변수값(event.keycode)과 data-key 속성값이 같은 특정한 audio를 찾아 상수로 선언한다.
 
-### **3. 연타 가능하도록 설정**
+### 3. 연타 가능하도록 설정
 
 ```jsx
 function playAudio() {
@@ -97,13 +97,13 @@ function playAudio() {
 
 따라서 키를 누를 때마다 audio 재생을 초기화할 필요가 있다.
 
-### currentTime
+#### currentTime
 
 audio 및 video의 속성으로 재생의 현재 위치를 반환한다. 이 속성이 설정되어있는 경우, 플레이어는 지정된 위치로 이동한다.
 
 currentTime을 0으로 설정할 경우 키를 누를 때마다 audio가 0초부터 시작되기에 연타가 가능해진다.
 
-### **4. 키를 누른것을 화면에 표시**
+### 4. 키를 누른것을 화면에 표시
 
 ```jsx
 function keydownAnimation(event) {
@@ -114,7 +114,7 @@ function keydownAnimation(event) {
 
 키를 누른것을 표시하기 위해 audio와 동일하게 해당 키를 나타내는 div를 찾은 후 CSS 효과를 적용시킨다.
 
-### classList.add("클래스 이름")
+#### classList.add("클래스 이름")
 
 ```jsx
 //미리 CSS에 배경효과를 작성해둔 playing 클래스를 추가
@@ -125,7 +125,7 @@ element에 클래스를 추가하는 메서드이다.
 
 반대로 클래스를 제거할땐 classList.remove를 사용하면 된다.
 
-### **5. transition이 끝나면 다시 원래대로 돌아가도록 설정**
+### 5. transition이 끝나면 다시 원래대로 돌아가도록 설정
 
 ```jsx
 //querySelectorAll는 CSS선택자를 사용하여 배열과 비슷한 객체인 NodeList를 반환한다.
@@ -143,7 +143,7 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
 키를 누를 때마다 눌렀다는 것을 인식하기 위해 키를 떼면 다시 CSS효과가 제거될 필요가 있다.
 
-### forEach()
+#### forEach()
 
 배열의 요소 각각에 주어진 함수를 실행하는 메서드이다.
 
@@ -151,7 +151,7 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition))
 
 forEach() 메서드를 사용해 NodeList인 keys의 요소 각각에 키를 떼면 removeTransition 함수가 전달되도록 한다.
 
-### Transitionend
+#### Transitionend
 
 transition(전이)가 완료된 후 발생하는 이벤트이다.
 

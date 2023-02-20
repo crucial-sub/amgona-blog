@@ -7,7 +7,26 @@
 @layer base {
   @font-face {
     font-family: 'Pretendard';
-    src: url('/public//fonts//pretendard-regular.subset.woff2') format('woff2');
+    src: url('/fonts//pretendard-regular.subset.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('/fonts//pretendard-medium.subset.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('/fonts//pretendard-semibold.subset.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('/fonts//pretendard-bold.subset.woff2') format('woff2');
+    font-weight: 700;
     font-display: swap;
   }
 
@@ -32,11 +51,18 @@
     margin: 1.4em 0 0.6em 0;
   }
 
-  h3 {
+  .post h3 {
     font-size: 22px;
     font-weight: 600;
 
     margin: 1.2em 0 0.4em 0;
+  }
+
+  .post h4 {
+    font-size: 20px;
+    font-weight: 600;
+
+    margin: 1em 0 0.2em 0;
   }
 
   .post img {
@@ -58,6 +84,15 @@
     overflow-wrap: break-word;
   }
 
+  @media (min-width: 1024px) {
+    .post blockquote > p {
+      margin: 8px 0px;
+    }
+    .post h2 {
+      font-size: 30px;
+    }
+  }
+
   .post hr {
     height: 1px;
     margin-top: 35px;
@@ -76,6 +111,7 @@
 
   .post blockquote > p {
     font-style: italic;
+    font-weight: 400;
     color: #fff;
   }
 
@@ -91,11 +127,31 @@
     font-size: 20px;
     line-height: 2;
     color: #48996b;
+    background-color: transparent;
   }
 
   .post li > img {
     width: 15px;
     height: 15px;
+  }
+
+  .post strong {
+    color: #000;
+    font-weight: 600;
+    padding: 2px 3px;
+    border-radius: 4px;
+    background-color: #ffc93c;
+  }
+
+  .post a {
+    color: #4f93f1;
+    text-decoration: underline;
+
+    transition: color 0.2s ease;
+  }
+
+  .post a:hover {
+    color: #237bf6;
   }
 
   .accordion {
@@ -107,5 +163,30 @@
   .accordion.opened {
     max-height: 500px;
     transition: max-height 0.3s ease-in-out;
+  }
+
+  .postList h3 {
+    transition: color 0.3s ease;
+  }
+
+  .postList .thumbnail {
+    transition: transform 0.3s ease;
+  }
+
+  .postList .overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  @media (min-width: 1024px) {
+    .postList:hover h3 {
+      color: #3182f6;
+    }
+    .postList:hover .thumbnail {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+    .postList:hover .overlay {
+      opacity: 0.1;
+    }
   }
 }

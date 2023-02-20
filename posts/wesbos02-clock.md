@@ -20,7 +20,7 @@ thumbnail: '/images/wesbos02-clock.png'
 
 ## 코딩 과정
 
-### **1. 현재 시간 받아오기**
+### 1. 현재 시간 받아오기
 
 ```jsx
 function clock() {
@@ -33,7 +33,7 @@ function clock() {
 
 먼저 현재 시간을 받아오기 위해 Date 객체를 사용한다.
 
-### Date 객체
+#### Date 객체
 
 ```jsx
 const now = new Date()
@@ -52,7 +52,7 @@ new Date()를 호출하여 새로운 Date 객체를 생성한 now2와 달리
 
 그냥 Date()를 호출한 now1은 시간을 단순한 문자열로 반환한 것을 확인할 수 있다.
 
-### 시, 분, 초 받아오기
+#### 시, 분, 초 받아오기
 
 ```jsx
 const now = new Date()
@@ -71,7 +71,7 @@ const hours = now.getHours()
 
 ![로그기록 2](https://user-images.githubusercontent.com/87363422/156191799-d9687ad7-bb67-499c-8661-9fb93d5f41fd.png)
 
-### **2. 시간에 따른 침 각도 계산**
+### 2. 시간에 따른 침 각도 계산
 
 ```jsx
 const secondsDegree = (seconds / 60) * 360 + 90
@@ -79,7 +79,7 @@ const minsDegree = (mins / 60) * 360 + (seconds / 60) * 6 + 90
 const hoursDegree = (hours / 12) * 360 + (mins / 60) * 30 + 90
 ```
 
-### 초침 각도 계산
+#### 초침 각도 계산
 
 ```jsx
 const secondsDegree = (seconds / 60) * 360 + 90
@@ -93,7 +93,7 @@ seconds : degree = 60s : 360deg
 
 > ⚠️ 이 때 기본 CSS 설정에서 침이 12시를 가르키게 하기위해 90deg를 회전시켜놓은 상태이므로 이를 맞춰주기 위해 JavaScript에서 계산할 때도 모든 침의 각도에 90deg를 더해준다!
 
-### 분침 각도 계산
+#### 분침 각도 계산
 
 ```jsx
 const minsDegree = (mins / 60) * 360 + (seconds / 60) * 6 + 90
@@ -109,7 +109,7 @@ degree = (mins/60) \* 360 이다.
 
 (seconds / 60) \* 6 만큼 더해주면 된다.
 
-### 시침 각도 계산
+#### 시침 각도 계산
 
 ```jsx
 const hoursDegree = (hours / 12) * 360 + (mins / 60) * 30 + 90
@@ -125,7 +125,7 @@ degree = (hours / 12) \* 360) 이다.
 
 (mins / 60) \* 30 만큼 더해준다.
 
-### **3. 각도 계산 결과에 따라 침 회전시키기**
+### 3. 각도 계산 결과에 따라 침 회전시키기
 
 ```jsx
 const secondHand = document.querySelector('.second-hand')
@@ -150,7 +150,7 @@ function clock() {
 
 각 침을 상수로 선언한 후 style로 위에서 계산한 각도 만큼 rotate 시켜준다.
 
-### **4. 함수의 주기적 실행**
+### 4. 함수의 주기적 실행
 
 ```jsx
 setInterval(clock, 1000)
@@ -158,7 +158,7 @@ setInterval(clock, 1000)
 
 이제 실제로 시계를 작동시키기 위해 setInterval() 메서드를 사용하여 1초마다 함수가 실행되도록 한다.
 
-### setInterval()
+#### setInterval()
 
 setInterval(func, delay, arg1, arg2 , ...)의 형태로 사용하며 함수를 일정한 주기로 반복 실행시켜준다
 
@@ -166,7 +166,7 @@ setInterval(func, delay, arg1, arg2 , ...)의 형태로 사용하며 함수를 �
 >
 > 따라서 clock() 코드를 추가하여 함수가 페이지를 열자마자 바로 실행되도록 한다!
 
-### **5. 실제 시계처럼 틱틱거리게 하기**
+### 5. 실제 시계처럼 틱틱거리게 하기
 
 ```css
 .hand {
@@ -179,7 +179,7 @@ setInterval(func, delay, arg1, arg2 , ...)의 형태로 사용하며 함수를 �
 
 실제 시계처럼 침이 움직일때 틱틱 거리는 효과(원래 움직여야할 범위보다 살짝 더 움직인 후 다시 돌아오는 효과)를 주기위해 CSS transition에 속성을 추가해준다.
 
-### transition-timing-function
+#### transition-timing-function
 
 transition-timing-function으로 transition의 진행 속도를 조절할 수 있다.
 
