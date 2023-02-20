@@ -1,16 +1,51 @@
-import { memo, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import { PostListType } from 'utils/types'
 import CategoryButton from './CategoryButton'
+import Pagination from './Pagination'
 import PostList from './PostList'
 import PostsNotFound from './PostsNotFound'
 
+const POSTS_PER_PAGE = 5
+
 const Posts = ({ title, posts, categories }: PostListType) => {
+  const [currentPage, setCurrentPage] = useState<number>(1)
   const [selectedCategory, setSelectedCategory] = useState<string>('All')
 
   const filteredPosts =
     selectedCategory === 'All'
       ? posts
       : posts.filter(post => post.frontmatter.category === selectedCategory)
+
+  const lastPageNumber = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
+  const indexOfLastPost = currentPage * POSTS_PER_PAGE
+  const indexOfFirstPost = indexOfLastPost - POSTS_PER_PAGE
+
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
+
+  const remainder = currentPage % POSTS_PER_PAGE
+  let leftEdge = !remainder ? currentPage - 4 : currentPage - remainder + 1
+  let rightEdge = !remainder
+    ? currentPage
+    : currentPage - remainder + POSTS_PER_PAGE
+
+  const pageNumbers = []
+
+  for (let i = 1; i <= lastPageNumber; i++) {
+    pageNumbers.push(i)
+  }
+
+  const currentPageNumbers = pageNumbers.filter(
+    number => number >= leftEdge && number <= rightEdge,
+  )
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedCategory])
+
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber)
+    window.scrollTo(0, 0)
+  }
 
   const handleClickCategory = (category: string) => {
     setSelectedCategory(category)
@@ -44,10 +79,17 @@ const Posts = ({ title, posts, categories }: PostListType) => {
       </section>
 
       <section className={'flex flex-col gap-14 mt-2'}>
-        {filteredPosts.map(post => (
+        {currentPosts.map(post => (
           <PostList key={post.slug} post={post} title={title} />
         ))}
       </section>
+
+      <Pagination
+        currentPage={currentPage}
+        paginate={paginate}
+        lastPageNumber={lastPageNumber}
+        currentPageNumbers={currentPageNumbers}
+      />
     </div>
   )
 }
