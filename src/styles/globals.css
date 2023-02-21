@@ -44,6 +44,10 @@
     color: #fff;
   }
 
+  .white {
+    background-color: #f2f4f5;
+  }
+
   .post h2 {
     font-size: 26px;
     font-weight: 600;
