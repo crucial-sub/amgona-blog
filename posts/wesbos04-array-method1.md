@@ -10,10 +10,10 @@ thumbnail: '/images/wesbos04-array-method1.png'
 
 ## 배워야 할 메서드 목록
 
-- **1.** array.filter()
-- **2.** array.map()
-- **3.** array.sort()
-- **4.** array.reduce()
+1. array.filter()
+2. array.map()
+3. array.sort()
+4. array.reduce()
 
 ---
 

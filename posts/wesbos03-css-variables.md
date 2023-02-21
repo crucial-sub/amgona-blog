@@ -10,8 +10,8 @@ thumbnail: '/images/wesbos03-css-variables.png'
 
 ## 로직
 
-- **1.** `<input>`의 속성값을 실시간으로 변경하는 함수 만들기
-- **2.** `<input>`에 이벤트 핸들러 할당
+1. `<input>`의 속성값을 실시간으로 변경하는 함수 만들기
+2. `<input>`에 이벤트 핸들러 할당
 
 ---
 

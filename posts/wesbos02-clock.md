@@ -10,11 +10,11 @@ thumbnail: '/images/wesbos02-clock.png'
 
 ## 로직
 
-- **1.** 현재 시간을 시, 분, 초 별로 받아옴 (`new.Date()`, `getSeconds()`, `getMinutes()`, `getHours()`)</br>
-- **2.** 각 침이 시간이 지날때마다 몇 도씩 움직여야할지 계산</br>
-- **3.** 위의 계산결과를 토대로 각 침을 회전시키도록 설정 (`rotate()`)</br>
-- **4.** 1초 간격으로 함수를 주기적으로 실행 (`setInterval()`)</br>
-- **5.** 실제 시계처럼 틱틱 거리게 CSS 추가</br>
+1. 현재 시간을 시, 분, 초 별로 받아옴 (`new.Date()`, `getSeconds()`, `getMinutes()`, `getHours()`)</br>
+2. 각 침이 시간이 지날때마다 몇 도씩 움직여야할지 계산</br>
+3. 위의 계산결과를 토대로 각 침을 회전시키도록 설정 (`rotate()`)</br>
+4. 1초 간격으로 함수를 주기적으로 실행 (`setInterval()`)</br>
+5. 실제 시계처럼 틱틱 거리게 CSS 추가</br>
 
 ---
 

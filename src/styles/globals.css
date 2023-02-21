@@ -118,6 +118,14 @@
     color: #fff;
   }
 
+  .post ol {
+    margin-left: 1em;
+  }
+
+  .post ol > li {
+    list-style: decimal;
+  }
+
   .post li {
     color: #bdc5d2;
     margin: 18px 0px;
