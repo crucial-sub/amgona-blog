@@ -107,7 +107,7 @@
   .post blockquote {
     margin: 30px 0px;
     padding: 16px;
-    background-color: #1f2937;
+    background-color: #2d2d2d;
     border-radius: 4px;
     border-left: 5px solid #1ae9df;
   }
@@ -138,14 +138,6 @@
     height: 15px;
   }
 
-  .post strong {
-    color: #000;
-    font-weight: 600;
-    padding: 2px 3px;
-    border-radius: 4px;
-    background-color: #ffc93c;
-  }
-
   .post a {
     color: #4f93f1;
     text-decoration: underline;
@@ -155,6 +147,13 @@
 
   .post a:hover {
     color: #237bf6;
+  }
+
+  .post code {
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #363636;
   }
 
   .accordion {
