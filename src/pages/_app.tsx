@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 
 import Header from '@/components/public/Header'
 import { NextSeo } from 'next-seo'
+import Footer from '@/components/public/Footer'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
@@ -15,6 +16,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <main className={'flex-grow'}>
           <Component {...pageProps} />
         </main>
+        <Footer />
       </div>
     </>
   )
