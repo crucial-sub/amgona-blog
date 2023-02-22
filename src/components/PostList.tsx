@@ -11,11 +11,12 @@ interface PostListProps {
 const PostList = ({ post, title }: PostListProps) => {
   const { slug, frontmatter } = post
 
-  const slicedDate = frontmatter.date.slice(0, 10)
-
   return (
     <article>
-      <Link className={'desktop:postList'} href={`/post/${slug}`}>
+      <Link
+        className={'desktop:postList'}
+        href={`/post/${title.toLowerCase()}/${slug}`}
+      >
         <div
           className={
             'flex desktop:items-center desktop:flex-row mobile:flex-col'
@@ -47,7 +48,9 @@ const PostList = ({ post, title }: PostListProps) => {
             <p className={'max-h-24 mb-3 text-base text-gray'}>
               {frontmatter.excerpt}
             </p>
-            <span className={'text-sm text-lightGray'}>{slicedDate}</span>
+            <span className={'text-sm text-lightGray'}>
+              {frontmatter.date.slice(0, 10)}
+            </span>
           </div>
         </div>
       </Link>

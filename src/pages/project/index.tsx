@@ -5,22 +5,22 @@ import path from 'path'
 import { sortByDate } from 'utils'
 import { PostListType } from 'utils/types'
 
-const DevPage = ({ posts, categories }: PostListType) => {
+const ProjectPage = ({ posts, categories }: PostListType) => {
   return (
     <>
-      <Posts title={'Dev'} posts={posts} categories={categories} />
+      <Posts title={'Project'} posts={posts} categories={categories} />
     </>
   )
 }
 
 export const getStaticProps = async () => {
-  const files = fs.readdirSync(path.join('posts', 'dev'))
+  const files = fs.readdirSync(path.join('posts', 'project'))
 
   const posts = files.map(filename => {
     const slug = filename.replace('.md', '')
 
     const markdownWithMeta = fs.readFileSync(
-      path.join('posts', 'dev', filename),
+      path.join('posts', 'project', filename),
       'utf-8',
     )
 
@@ -45,4 +45,4 @@ export const getStaticProps = async () => {
   }
 }
 
-export default DevPage
+export default ProjectPage

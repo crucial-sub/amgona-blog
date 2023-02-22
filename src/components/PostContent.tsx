@@ -6,7 +6,6 @@ import Prism from '../../utils/prism'
 
 const PostContent = ({ frontmatter, content }: PostDetailType) => {
   const { title, date, thumbnail } = frontmatter
-  const slicedDate = date.slice(0, 10)
 
   useLayoutEffect(() => {
     Prism.highlightAll()
@@ -32,7 +31,7 @@ const PostContent = ({ frontmatter, content }: PostDetailType) => {
           <h1 className={'mb-3 desktop:text-4xl mobile:text-3xl font-bold'}>
             {title}
           </h1>
-          <div className={'mb-8 text-gray'}>{slicedDate}</div>
+          <div className={'mb-8 text-gray'}>{date.slice(0, 10)}</div>
 
           <div>
             <article dangerouslySetInnerHTML={{ __html: marked(content) }} />

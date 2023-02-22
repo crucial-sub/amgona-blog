@@ -22,7 +22,7 @@ const Post = ({ frontmatter, content }: PostDetailType) => {
 }
 
 export const getStaticPaths = async (): Promise<GetStaticPathsReturn> => {
-  const files = fs.readdirSync(path.join('posts'))
+  const files = fs.readdirSync(path.join('posts', 'dev'))
 
   const paths = files.map(filename => ({
     params: {
@@ -40,7 +40,7 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const { slug } = params
 
   const markdownWithMeta = fs.readFileSync(
-    path.join('posts', slug + '.md'),
+    path.join('posts', 'dev', slug + '.md'),
     'utf-8',
   )
 
