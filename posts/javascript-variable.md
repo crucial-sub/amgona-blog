@@ -1,6 +1,6 @@
 ---
 title: '[JavaScript] 변수의 선언 및 할당'
-date: '2023.02.19'
+date: '2023.02.14'
 category: 'JavaScript'
 excerpt: '자바스크립트에서 변수의 선언과 데이터 할당이 어떻게 이뤄지는지 알아보자!'
 thumbnail: '/images/javascript-variable.png'

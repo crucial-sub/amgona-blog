@@ -1,6 +1,6 @@
 ---
 title: '[wesbos30] 02. Clock'
-date: '2023.02.17'
+date: '2023.02.16, 01:00'
 category: 'wesbos30'
 excerpt: 'CSS와 JavaScript를 활용하여 간단한 아날로그 시계를 만들어보자!'
 thumbnail: '/images/wesbos02-clock.png'

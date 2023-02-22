@@ -1,6 +1,6 @@
 ---
 title: '[wesbos30] 03. CSS Variables 조절하기'
-date: '2023.02.20'
+date: '2023.02.16, 02:00'
 category: 'wesbos30'
 excerpt: '페이지 내의 여러 타입의 <input>들을 조정하면 그 값들이 실시간으로 이미지에 반영되도록 해보자!'
 thumbnail: '/images/wesbos03-css-variables.png'
