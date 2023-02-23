@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import Badge from '@/components/public/Badge'
+import { NextSeo } from 'next-seo'
 import React, { useLayoutEffect } from 'react'
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
 
   return (
     <>
+      <NextSeo title="암고나 블로그" description="Amgona Blog." />
       <div
         className={
           'flex flex-col justify-center desktop:max-w-[980px] mobile:w-screen mobile:px-6 mb-16 desktop:m-auto desktop:pb-14 mobile:pb-0'

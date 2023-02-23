@@ -1,6 +1,7 @@
 import Posts from '@/components/Posts'
 import fs from 'fs'
 import matter from 'gray-matter'
+import { NextSeo } from 'next-seo'
 import path from 'path'
 import { sortByDate } from 'utils'
 import { PostListType } from 'utils/types'
@@ -8,6 +9,7 @@ import { PostListType } from 'utils/types'
 const DevPage = ({ posts, categories }: PostListType) => {
   return (
     <>
+      <NextSeo title="암고나 블로그" description="Amgona Blog." />
       <Posts title={'Dev'} posts={posts} categories={categories} />
     </>
   )
