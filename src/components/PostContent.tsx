@@ -1,8 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
+import useLazyLoad from 'hooks/useLazyLoad'
 import { marked } from 'marked'
 import { useLayoutEffect } from 'react'
 import { PostDetailType } from 'utils/types'
 import Prism from '../../utils/prism'
+
+const renderer = {
+  image(href: string, title: string, text: string) {
+    return `
+      <img class="lazyImage" src="/images/loading-white.svg" alt=${title} data-src=${href} />
+    `
+  },
+}
 
 const PostContent = ({ frontmatter, content }: PostDetailType) => {
   const { title, date, thumbnail } = frontmatter
@@ -10,6 +19,9 @@ const PostContent = ({ frontmatter, content }: PostDetailType) => {
   useLayoutEffect(() => {
     Prism.highlightAll()
   }, [])
+
+  marked.use({ renderer })
+  useLazyLoad()
 
   return (
     <>
