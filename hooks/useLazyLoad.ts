@@ -22,7 +22,13 @@ const useLazyLoad = (lazyImages: NodeListOf<HTMLImageElement> | null) => {
     threshold: 0.1,
   })
 
-  lazyImages.forEach(img => io.observe(img))
+  lazyImages.forEach((img, index) => {
+    if (index < 2 && img.dataset.src) {
+      img.src = img.dataset.src
+    } else {
+      io.observe(img)
+    }
+  })
 }
 
 export default useLazyLoad
