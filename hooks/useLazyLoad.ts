@@ -1,8 +1,5 @@
-const useLazyLoad = () => {
-  if (typeof document === 'undefined') return
-
-  const lazyImages: NodeListOf<HTMLImageElement> =
-    document.querySelectorAll('.lazyImage')
+const useLazyLoad = (lazyImages: NodeListOf<HTMLImageElement> | null) => {
+  if (!lazyImages) return
 
   const observerCallback = (
     entries: IntersectionObserverEntry[],

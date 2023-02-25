@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import useLazyLoad from 'hooks/useLazyLoad'
 import { marked } from 'marked'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useState } from 'react'
 import { PostDetailType } from 'utils/types'
 import Prism from '../../utils/prism'
 
@@ -15,13 +15,16 @@ const renderer = {
 
 const PostContent = ({ frontmatter, content }: PostDetailType) => {
   const { title, date, thumbnail } = frontmatter
+  const [lazyImages, setLazyImages] =
+    useState<NodeListOf<HTMLImageElement> | null>(null)
 
   useLayoutEffect(() => {
     Prism.highlightAll()
+    setLazyImages(document.querySelectorAll('.lazyImage'))
   }, [])
 
   marked.use({ renderer })
-  useLazyLoad()
+  useLazyLoad(lazyImages)
 
   return (
     <>
