@@ -19,7 +19,7 @@ const useLazyLoad = (lazyImages: NodeListOf<HTMLImageElement> | null) => {
   }
 
   const io = new IntersectionObserver(observerCallback, {
-    threshold: 0.1,
+    threshold: 0.05,
   })
 
   lazyImages.forEach((img, index) => {
