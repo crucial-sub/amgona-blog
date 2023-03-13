@@ -3,7 +3,7 @@ title: '[wesbos30] 01. Drum kit'
 date: '2023.02.13'
 category: 'wesbos30'
 excerpt: '키보드로 오디오를 재생하는 드럼 키트를 만들어보자!'
-thumbnail: '/images/wesbos01-drumkit.png'
+thumbnail: '/images/wesbos01-drumkit.webp'
 ---
 
 > 💡 키보드 중의 어떤 키를 눌렀을 때 해당 키와 데이터 값이 같은 audio를 찾아 재생시키는 drum kit다.

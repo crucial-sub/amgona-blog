@@ -3,7 +3,7 @@ title: '[wesbos30] 24. Sticky Nav'
 date: '2023.02.21, 01:00'
 category: 'wesbos30'
 excerpt: '스크롤을 내려도 페이지 밖으로 사라지지않고 상단에 고정되어 있는 네비게이션 바를 구현해보자!'
-thumbnail: '/images/wesbos24-sticky-nav.png'
+thumbnail: '/images/wesbos24-sticky-nav.webp'
 ---
 
 > 💡 이번 챕터는 반응형 웹에서 자주 쓰이는 형태로서

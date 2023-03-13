@@ -3,7 +3,7 @@ title: '[wesbos30] 17. Sort Without Articles'
 date: '2023.02.20, 02:00'
 category: 'wesbos30'
 excerpt: '💡 주어진 배열을 관사(A, An, The)를 제외한 알파벳 순으로 정렬해보자!'
-thumbnail: '/images/wesbos17-sort-without-articles.png'
+thumbnail: '/images/wesbos17-sort-without-articles.webp'
 ---
 
 > 💡 주어진 배열을 관사(A, An, The)를 제외한 알파벳 순으로 정렬해보자!

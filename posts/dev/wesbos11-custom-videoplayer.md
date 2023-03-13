@@ -3,7 +3,7 @@ title: '[wesbos30] 11. Custom Video Player'
 date: '2023.02.19, 01:00'
 category: 'wesbos30'
 excerpt: '💡 비디오 플레이어의 여러 기능들을 직접 구현해보자!'
-thumbnail: '/images/wesbos11-custom-videoplayer.png'
+thumbnail: '/images/wesbos11-custom-videoplayer.webp'
 ---
 
 > 💡 비디오 플레이어의 여러 기능들을 직접 구현해보자!
