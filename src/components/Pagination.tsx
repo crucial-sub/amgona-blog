@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
 import PageButton from './PageButton'
 
 interface PaginationProps {
@@ -27,7 +26,11 @@ const Pagination = ({
             onClick={() => paginate(currentPage - 1)}
           >
             <img
-              src={'/images/arrow-left-white.svg'}
+              src={`${
+                currentPage === 1
+                  ? '/images/arrow-left-gray.svg'
+                  : '/images/arrow-left-white.svg'
+              }`}
               alt="arrow-left"
               width={20}
               height={20}
@@ -53,7 +56,11 @@ const Pagination = ({
             onClick={() => paginate(currentPage + 1)}
           >
             <img
-              src={'/images/arrow-right-white.svg'}
+              src={`${
+                currentPage === lastPageNumber
+                  ? '/images/arrow-right-gray.svg'
+                  : '/images/arrow-right-white.svg'
+              }`}
               width={20}
               height={20}
               alt="arrow-right"
