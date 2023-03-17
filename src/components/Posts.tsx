@@ -6,6 +6,7 @@ import PostList from './PostList'
 import PostsNotFound from './PostsNotFound'
 
 const POSTS_PER_PAGE = 5
+const PAGINATION_RANGE = 5
 
 const Posts = ({ title, posts, categories }: PostListType) => {
   const [currentPage, setCurrentPage] = useState<number>(1)
@@ -22,21 +23,15 @@ const Posts = ({ title, posts, categories }: PostListType) => {
 
   const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost)
 
-  const remainder = currentPage % POSTS_PER_PAGE
-  let leftEdge = !remainder ? currentPage - 4 : currentPage - remainder + 1
-  let rightEdge = !remainder
-    ? currentPage
-    : currentPage - remainder + POSTS_PER_PAGE
+  const currentPageGroup = Math.ceil(currentPage / PAGINATION_RANGE)
+  const leftEdge = (currentPageGroup - 1) * PAGINATION_RANGE + 1
+  const rightEdge = currentPageGroup * PAGINATION_RANGE
 
-  const pageNumbers = []
+  const currentPageNumbers = []
 
-  for (let i = 1; i <= lastPageNumber; i++) {
-    pageNumbers.push(i)
+  for (let i = leftEdge; i <= rightEdge && i <= lastPageNumber; i++) {
+    currentPageNumbers.push(i)
   }
-
-  const currentPageNumbers = pageNumbers.filter(
-    number => number >= leftEdge && number <= rightEdge,
-  )
 
   useEffect(() => {
     setCurrentPage(1)
