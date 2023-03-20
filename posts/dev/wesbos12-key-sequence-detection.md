@@ -3,7 +3,7 @@ title: '[wesbos30] 12. Key Sequence Detection'
 date: '2023.02.19, 02:00'
 category: 'wesbos30'
 excerpt: '💡 특정 키들을 순서대로 입력하면 발생하는 이스터에그를 구현해보자!'
-thumbnail: '/images/wesbos12-key-sequence-detection.png'
+thumbnail: '/images/wesbos12-key-sequence-detection.webp'
 ---
 
 > 💡 특정 키들을 순서대로 입력하면 발생하는 이스터에그를 구현해보자!

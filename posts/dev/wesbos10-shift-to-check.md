@@ -3,7 +3,7 @@ title: '[wesbos30] 10. Hold Shift to check the box'
 date: '2023.02.18, 03:00'
 category: 'wesbos30'
 excerpt: 'SHIFT 키와 같이 클릭하여 한번에 여러 개의 체크박스를 모두 체크하는 기능을 구현해보자!'
-thumbnail: '/images/wesbos10-shift-to-check.png'
+thumbnail: '/images/wesbos10-shift-to-check.webp'
 ---
 
 > 💡 SHIFT 키와 같이 클릭하여 한번에 여러 개의 체크박스를 모두 체크하는 기능을 구현해보자!

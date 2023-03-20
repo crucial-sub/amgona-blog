@@ -3,7 +3,7 @@ title: '[wesbos30] 09. 개발자 도구 활용'
 date: '2023.02.18, 02:00'
 category: 'wesbos30'
 excerpt: '크롬 개발자 도구의 기능 중에서 개발자에게 유용한 여러 console 메서드에 대해 알아보자!'
-thumbnail: '/images/wesbos09-development-tools.png'
+thumbnail: '/images/wesbos09-development-tools.webp'
 ---
 
 > 💡 크롬 개발자 도구의 기능 중에서 개발자에게 유용한 여러 console 메서드에 대해 알아보자!

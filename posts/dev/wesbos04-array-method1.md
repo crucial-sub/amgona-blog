@@ -3,7 +3,7 @@ title: '[wesbos30] 04. Array 메서드 활용 1'
 date: '2023.02.17, 01:00'
 category: 'wesbos30'
 excerpt: 'Array 메서드를 배워보자 1탄'
-thumbnail: '/images/wesbos04-array-method1.png'
+thumbnail: '/images/wesbos04-array-method1.webp'
 ---
 
 > 💡 Array 메서드를 배워보자 1탄

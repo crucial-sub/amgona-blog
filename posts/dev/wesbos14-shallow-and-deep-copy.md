@@ -3,7 +3,7 @@ title: '[wesbos30] 14. 배열&객체의 복사와 참조'
 date: '2023.02.20, 01:00'
 category: 'wesbos30'
 excerpt: '💡 참조(reference)와 복사(copy)의 차이점에 대해 알아보자!'
-thumbnail: '/images/wesbos14-shallow-and-deep-copy.png'
+thumbnail: '/images/wesbos14-shallow-and-deep-copy.webp'
 ---
 
 > 💡 참조(reference)와 복사(copy)의 차이점에 대해 알아보자!

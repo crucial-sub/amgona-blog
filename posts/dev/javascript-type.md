@@ -3,7 +3,7 @@ title: '[JavaScript] 원시타입과 참조타입'
 date: '2023.03.03'
 category: 'JavaScript'
 excerpt: '자바스크립트의 데이터 타입에 대해 알아보자!'
-thumbnail: '/images/javascript-type.png'
+thumbnail: '/images/javascript-type.webp'
 ---
 
 ## 데이터의 두 가지 타입
