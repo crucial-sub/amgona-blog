@@ -201,11 +201,7 @@
     }
   }
 
-  .currentPage {
-    background-color: #9ca3af;
-  }
-
-  .pageButton:hover .selectablePage {
-    border: 1px solid #9ca3af;
+  .scroll::-webkit-scrollbar {
+    display: none;
   }
 }

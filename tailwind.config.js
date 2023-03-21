@@ -19,7 +19,7 @@ module.exports = {
         yellow: '#F6B352',
       },
       screens: {
-        mobile: '320px',
+        mobile: '280px',
         tablet: '620px',
         desktop: '1024px',
       },

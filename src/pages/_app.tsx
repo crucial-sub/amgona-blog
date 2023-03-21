@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <NextSeo title="암고나 블로그" description="Amgona Blog." />
-      <div className={'flex flex-col min-w-[320px] min-h-screen'}>
+      <div className={'flex flex-col min-w-[280px] min-h-screen'}>
         <Header />
         <main className={'flex-grow'}>
           <Component {...pageProps} />

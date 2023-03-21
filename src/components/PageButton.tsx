@@ -10,7 +10,7 @@ const PageButton = ({ pageNumber, isSelected, paginate }: PageButtonProps) => {
   return (
     <li key={pageNumber} className={`flex justify-center items-center`}>
       <button
-        className={`w-10 h-10 rounded-full transition-all duration-200  ${
+        className={`tablet:w-10 tablet:h-10 mobile:w-7 mobile:h-7 rounded-full transition-all duration-200  ${
           isSelected
             ? 'text-white bg-lightNavy'
             : 'text-gray hover:bg-lightNavy hover:text-white'

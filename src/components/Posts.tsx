@@ -61,7 +61,7 @@ const Posts = ({ title, posts, categories }: PostListType) => {
           {title}
         </h2>
 
-        <nav className={'flex'}>
+        <nav className={'flex overflow-x-auto scroll'}>
           {categories.map(category => (
             <CategoryButton
               key={category}
