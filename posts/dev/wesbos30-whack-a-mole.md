@@ -3,7 +3,7 @@ title: '[wesbos30] 30. 두더지 뚝배기'
 date: '2023.02.22, 03:00'
 category: 'wesbos30'
 excerpt: '💡 랜덤으로 튀어나오는 두더지를 클릭해서 점수를 올리는 간단한 두더지 잡기 게임이다.'
-thumbnail: '/images/wesbos30-whack-a-mole.gif'
+thumbnail: '/images/wesbos30-whack-a-mole.webm'
 ---
 
 > 💡 랜덤으로 튀어나오는 두더지를 클릭해서 점수를 올리는 간단한 두더지 잡기 게임이다.

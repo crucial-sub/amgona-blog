@@ -3,7 +3,7 @@ title: '[wesbos30] 22. Following Highlight'
 date: '2023.02.20, 03:00'
 category: 'wesbos30'
 excerpt: 'Following Highlight'
-thumbnail: '/images/wesbos22-following-highlight.gif'
+thumbnail: '/images/wesbos22-following-highlight.webm'
 ---
 
 > 💡 메뉴바에서 내가 선택한 메뉴를 표시할 때</br>`hover`나 `classList.add` & `classList.remove`를 통해 해당 요소 자체에 CSS 값을 적용하는 방식이 아닌,</br>`getBoundingClientRect()`메서드를 통해 해당 요소의 위치와 크기를 구한 후, 따로 만들어놓은 배경이 이를 따라다니도록 하는 방식이다.

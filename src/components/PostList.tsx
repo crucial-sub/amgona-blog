@@ -10,6 +10,7 @@ interface PostListProps {
 
 const PostList = ({ post, title }: PostListProps) => {
   const { slug, frontmatter } = post
+  const [fileName, fileFormat] = frontmatter.thumbnail.split('.')
 
   return (
     <article>
@@ -27,13 +28,28 @@ const PostList = ({ post, title }: PostListProps) => {
               'relative desktop:w-48 desktop:h-48 mobile:w-full desktop:mb-0 desktop:mr-12 mobile:mb-5 shrink-0 overflow-hidden drop-shadow-md rounded-xl'
             }
           >
-            <img
-              className={
-                'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
-              }
-              src={frontmatter.thumbnail}
-              alt="thumbnail"
-            />
+            {fileFormat.includes('webm' || 'mp4') ? (
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className={
+                  'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
+                }
+              >
+                <source src={`${fileName}.webm`} type="video/webm" />
+                <source src={`${fileName}.mp4`} type="video/mp4" />
+              </video>
+            ) : (
+              <img
+                className={
+                  'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
+                }
+                src={frontmatter.thumbnail}
+                alt="thumbnail"
+              />
+            )}
             <div className={'absolute top-0 left-0 w-full h-full overlay'} />
           </div>
 

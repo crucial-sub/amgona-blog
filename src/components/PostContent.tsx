@@ -15,6 +15,7 @@ const renderer = {
 
 const PostContent = ({ frontmatter, content }: PostDetailType) => {
   const { title, date, thumbnail } = frontmatter
+  const [fileName, fileFormat] = thumbnail.split('.')
   const [lazyImages, setLazyImages] =
     useState<NodeListOf<HTMLImageElement> | null>(null)
 
@@ -34,15 +35,30 @@ const PostContent = ({ frontmatter, content }: PostDetailType) => {
         }
       >
         <div className={'desktop:w-[700px] mobile:w-full'}>
-          <img
-            className={
-              'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
-            }
-            src={thumbnail}
-            alt="thumbnail-image"
-            width={700}
-            height={400}
-          />
+          {fileFormat.includes('webm' || 'mp4') ? (
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className={
+                'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
+              }
+            >
+              <source src={`${fileName}.webm`} type="video/webm" />
+              <source src={`${fileName}.mp4`} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              className={
+                'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
+              }
+              src={thumbnail}
+              alt="thumbnail-image"
+              width={700}
+              height={400}
+            />
+          )}
           <h1 className={'mb-3 desktop:text-4xl mobile:text-3xl font-bold'}>
             {title}
           </h1>
