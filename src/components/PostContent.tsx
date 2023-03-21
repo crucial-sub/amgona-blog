@@ -49,15 +49,18 @@ const PostContent = ({ frontmatter, content }: PostDetailType) => {
               <source src={`${fileName}.mp4`} type="video/mp4" />
             </video>
           ) : (
-            <img
-              className={
-                'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
-              }
-              src={thumbnail}
-              alt="thumbnail-image"
-              width={700}
-              height={400}
-            />
+            <picture>
+              <source srcSet={`${fileName}.webp`} type="image/webp" />
+              <img
+                className={
+                  'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
+                }
+                src={`${fileName}.png`}
+                alt="thumbnail-image"
+                width={700}
+                height={400}
+              />
+            </picture>
           )}
           <h1 className={'mb-3 desktop:text-4xl mobile:text-3xl font-bold'}>
             {title}

@@ -42,13 +42,16 @@ const PostList = ({ post, title }: PostListProps) => {
                 <source src={`${fileName}.mp4`} type="video/mp4" />
               </video>
             ) : (
-              <img
-                className={
-                  'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
-                }
-                src={frontmatter.thumbnail}
-                alt="thumbnail"
-              />
+              <picture>
+                <source srcSet={`${fileName}.webp`} type="image/webp" />
+                <img
+                  src={`${fileName}.png`}
+                  alt="thumbnail"
+                  className={
+                    'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
+                  }
+                />
+              </picture>
             )}
             <div className={'absolute top-0 left-0 w-full h-full overlay'} />
           </div>
