@@ -25,7 +25,7 @@ const PostList = ({ post, title }: PostListProps) => {
         >
           <div
             className={
-              'relative desktop:w-48 desktop:h-48 mobile:w-full desktop:mb-0 desktop:mr-12 mobile:mb-5 shrink-0 overflow-hidden drop-shadow-md rounded-xl'
+              'relative desktop:w-48 desktop:h-48 desktop:aspect-square tablet:h-auto mobile:w-full mobile:h-[205px] mobile:aspect-[700/400] desktop:mb-0 desktop:mr-12 mobile:mb-5 shrink-0 overflow-hidden drop-shadow-md rounded-xl'
             }
           >
             {fileFormat.includes('webm' || 'mp4') ? (
@@ -35,7 +35,7 @@ const PostList = ({ post, title }: PostListProps) => {
                 muted
                 playsInline
                 className={
-                  'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
+                  'desktop:w-48 desktop:h-48 desktop:aspect-square tablet:h-auto mobile:w-full mobile:h-[205px] mobile:aspect-[700/400] object-cover thumbnail'
                 }
               >
                 <source src={`${fileName}.webm`} type="video/webm" />
@@ -48,7 +48,7 @@ const PostList = ({ post, title }: PostListProps) => {
                   src={`${fileName}.png`}
                   alt="thumbnail"
                   className={
-                    'desktop:w-48 desktop:h-48 desktop:aspect-square aspect-[700:400] mobile:w-full mobile:h-[205px] tablet:h-auto object-cover thumbnail'
+                    'desktop:w-48 desktop:h-48 desktop:aspect-square tablet:h-auto mobile:w-full mobile:h-[205px] mobile:aspect-[700/400] object-fit thumbnail'
                   }
                 />
               </picture>
