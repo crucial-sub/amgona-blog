@@ -41,6 +41,7 @@
   body {
     background-color: #1a1c1e;
     color: #fff;
+    transition: background-color 0.5s ease-in-out;
   }
 
   .white {
