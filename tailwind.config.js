@@ -23,6 +23,20 @@ module.exports = {
         tablet: '620px',
         desktop: '1024px',
       },
+      keyframes: {
+        stretch: {
+          from: { width: '0%' },
+          to: { width: '100%' },
+        },
+        shrink: {
+          from: { width: '100%' },
+          to: { width: '0%' },
+        },
+      },
+      animation: {
+        stretch: 'stretch 0.2s ease-in',
+        shrink: 'shrink 0.1s ease-out',
+      },
     },
   },
   plugins: [],
