@@ -1,15 +1,17 @@
 import Posts from '@/components/Posts'
 import fs from 'fs'
 import matter from 'gray-matter'
-import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import path from 'path'
 import { sortByDate } from 'utils'
+import BlogSEO from 'utils/seo'
 import { PostListType } from 'utils/types'
 
 const DevPage = ({ posts, categories }: PostListType) => {
+  const router = useRouter()
   return (
     <>
-      <NextSeo title="암고나 블로그" description="Amgona Blog." />
+      <BlogSEO path={router.asPath} />
       <Posts title={'Dev'} posts={posts} categories={categories} />
     </>
   )
