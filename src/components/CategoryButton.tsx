@@ -22,7 +22,7 @@ const CategoryButton = ({
       {title}
       <span
         className={`absolute left-1/2 -translate-x-1/2 bottom-0 h-[3px] bg-yellow ${
-          isSelected ? 'animate-stretch w-full' : 'animate-shrink w-0'
+          isSelected && 'animate-stretch w-full'
         }`}
       />
     </button>
