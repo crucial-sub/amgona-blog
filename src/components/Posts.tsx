@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import { memo, useEffect, useState } from 'react'
 import { PostListType } from 'utils/types'
 import CategoryButton from './CategoryButton'
@@ -10,7 +11,8 @@ const PAGINATION_RANGE = 5
 
 const Posts = ({ title, posts, categories }: PostListType) => {
   const [currentPage, setCurrentPage] = useState<number>(1)
-  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const [selectedCategory, setSelectedCategory] = useState<string>('')
+  const router = useRouter()
 
   const filteredPosts =
     selectedCategory === 'All'
@@ -34,16 +36,34 @@ const Posts = ({ title, posts, categories }: PostListType) => {
   }
 
   useEffect(() => {
-    setCurrentPage(1)
-  }, [selectedCategory])
+    if (typeof window !== 'undefined') {
+      const sessionPath = sessionStorage.getItem('path') || 'dev'
+      if (sessionPath === router.pathname) {
+        const sessionCategory = sessionStorage.getItem('category') || 'All'
+        const sessionPage = parseInt(sessionStorage.getItem('page') || '1')
+        setSelectedCategory(sessionCategory)
+        setCurrentPage(sessionPage)
+      } else {
+        sessionStorage.setItem('path', router.pathname)
+        sessionStorage.setItem('category', 'All')
+        sessionStorage.setItem('page', '1')
+        setSelectedCategory('All')
+        setCurrentPage(1)
+      }
+    }
+  }, [])
 
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber)
+    sessionStorage.setItem('page', pageNumber.toString())
     window.scrollTo(0, 0)
   }
 
   const handleClickCategory = (category: string) => {
     setSelectedCategory(category)
+    sessionStorage.setItem('category', category)
+    sessionStorage.setItem('page', '1')
+    setCurrentPage(1)
   }
 
   if (!posts.length) return <PostsNotFound />
