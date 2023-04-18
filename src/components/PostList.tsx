@@ -10,7 +10,8 @@ interface PostListProps {
 
 const PostList = ({ post, title }: PostListProps) => {
   const { slug, frontmatter } = post
-  const [fileName, fileFormat] = frontmatter.thumbnail.split('.')
+  const { thumbnail, excerpt, date } = frontmatter
+  const [fileName, fileFormat] = thumbnail.split('.')
 
   return (
     <article>
@@ -45,7 +46,7 @@ const PostList = ({ post, title }: PostListProps) => {
               <picture>
                 <source srcSet={`${fileName}.webp`} type="image/webp" />
                 <img
-                  src={`${fileName}.png`}
+                  src={`${thumbnail}`}
                   alt="thumbnail"
                   className={
                     'desktop:w-48 desktop:h-48 desktop:aspect-square tablet:h-auto mobile:w-full mobile:h-[205px] mobile:aspect-[700/400] object-fit thumbnail'
@@ -64,11 +65,9 @@ const PostList = ({ post, title }: PostListProps) => {
             >
               {frontmatter.title}
             </h3>
-            <p className={'max-h-24 mb-3 text-base text-gray'}>
-              {frontmatter.excerpt}
-            </p>
+            <p className={'max-h-24 mb-3 text-base text-gray'}>{excerpt}</p>
             <span className={'text-sm text-lightGray'}>
-              {frontmatter.date.slice(0, 10)}
+              {date.slice(0, 10)}
             </span>
           </div>
         </div>

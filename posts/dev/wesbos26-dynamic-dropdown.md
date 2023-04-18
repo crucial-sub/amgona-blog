@@ -3,7 +3,7 @@ title: '[wesbos30] 26. 동적인 드롭다운 Nav'
 date: '2023.02.21, 03:00'
 category: 'wesbos30'
 excerpt: '💡 챕터22 Following Highlight에서 배운 내용을 활용하여 메뉴에 마우스를 올리면 흰 배경의 드롭다운 메뉴가 나오는 기능을 구현해보자!'
-thumbnail: '/images/wesbos26-dynamic-dropdown.webp'
+thumbnail: '/images/wesbos26-dynamic-dropdown.png'
 ---
 
 > 💡 챕터22 Following Highlight에서 배운 내용을 활용하여 메뉴에 마우스를 올리면 흰 배경의 드롭다운 메뉴가 나오는 기능을 구현해보자!

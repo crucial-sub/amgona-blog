@@ -3,7 +3,7 @@ title: '[JavaScript] 자바스크립트의 함수는 1급 객체이다.'
 date: '2023.03.06'
 category: 'JavaScript'
 excerpt: '1급 객체가 무엇인지 알아보자!'
-thumbnail: '/images/javascript-first-class-object.webp'
+thumbnail: '/images/javascript-first-class-object.png'
 ---
 
 ## 1급 시민(First Class Citizen)

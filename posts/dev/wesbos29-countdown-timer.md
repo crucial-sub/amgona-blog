@@ -3,7 +3,7 @@ title: '[wesbos30] 29. CountDown Timer'
 date: '2023.02.22, 02:00'
 category: 'wesbos30'
 excerpt: '💡 시간을 정해주면 카운트 다운을 해주는 타이머를 만들어보자!'
-thumbnail: '/images/wesbos29-countdown-timer.webp'
+thumbnail: '/images/wesbos29-countdown-timer.png'
 ---
 
 > 💡 시간을 정해주면 카운트 다운을 해주는 타이머를 만들어보자!

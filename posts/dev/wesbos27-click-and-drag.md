@@ -3,7 +3,7 @@ title: '[wesbos30] 27. Click And Drag'
 date: '2023.02.22, 01:00'
 category: 'wesbos30'
 excerpt: '💡 마우스를 클릭 후 드래그하면 이미지가 좌우로 부드럽게 슬라이드하는 기능을 구현해보자!'
-thumbnail: '/images/wesbos27-click-and-drag.webp'
+thumbnail: '/images/wesbos27-click-and-drag.png'
 ---
 
 > 💡 마우스를 클릭 후 드래그하면 이미지가 좌우로 부드럽게 슬라이드하는 기능을 구현해보자!

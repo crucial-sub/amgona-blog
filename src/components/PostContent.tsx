@@ -63,7 +63,7 @@ const PostContent = ({ frontmatter, content }: PostDetailType) => {
                 className={
                   'w-full desktop:h-[400px] aspect-[400:700] object-cover rounded-xl mb-8'
                 }
-                src={`${fileName}.png`}
+                src={`${thumbnail}`}
                 alt="thumbnail-image"
                 width={700}
                 height={400}

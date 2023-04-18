@@ -3,7 +3,7 @@ title: '[wesbos30] 06. 검색 자동완성 기능 구현'
 date: '2023.02.17, 03:00'
 category: 'wesbos30'
 excerpt: 'javascript를 활용하여 실시간으로 검색정보를 받아오자!'
-thumbnail: '/images/wesbos06-search-auto-complete.webp'
+thumbnail: '/images/wesbos06-search-auto-complete.png'
 ---
 
 > 💡 javascript를 활용하여 실시간으로 검색정보를 받아오자!

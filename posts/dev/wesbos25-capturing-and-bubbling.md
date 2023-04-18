@@ -3,7 +3,7 @@ title: '[wesbos30] 25. 이벤트 캡쳐와 버블링'
 date: '2023.02.21, 02:00'
 category: 'wesbos30'
 excerpt: '스크롤을 내려도 페이지 밖으로 사라지지않고 상단에 고정되어 있는 네비게이션 바를 구현해보자!'
-thumbnail: '/images/wesbos25-capturing-and-bubbling.webp'
+thumbnail: '/images/wesbos25-capturing-and-bubbling.png'
 ---
 
 > 💡 어떤 요소에서 이벤트가 발생했을 때 이벤트 전파 방향에 따라 구분되는 버블링과 캡쳐링에 대해 알아보자

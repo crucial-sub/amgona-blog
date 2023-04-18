@@ -3,7 +3,7 @@ title: '[wesbos30] 05. Flex Panel'
 date: '2023.02.17, 02:00'
 category: 'wesbos30'
 excerpt: 'flex를 사용하여 사이즈가 유연하게 바뀌는 panel을 만들어보자!'
-thumbnail: '/images/wesbos05-flexpanel.webp'
+thumbnail: '/images/wesbos05-flexpanel.png'
 ---
 
 > 💡 flex를 사용하여 사이즈가 유연하게 바뀌는 panel을 만들어보자
