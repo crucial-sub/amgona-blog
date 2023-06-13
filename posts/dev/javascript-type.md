@@ -12,13 +12,14 @@ thumbnail: '/images/javascript-type.png'
 ![데이터 타입](https://velog.velcdn.com/images/crucial-sub/post/293a3722-b33e-4d3b-b065-958f70eb37c5/image.png)
 
 > **원시 타입 변수 ⇒** 데이터가 담긴 메모리에 직접 접근
+>
 > **참조 타입 변수 ⇒** 주소에 대한 간접적인 참조를 통해 메모리에 접근
 
 ---
 
 ## 원시 타입
 
-변수에 원시 타입 데이터를 할당할 때 메모리 저장 방식은 이전에 [변수의 선언 및 할당](https://velog.io/@crucial-sub/JavaScript-%EB%B3%80%EC%88%98%EC%9D%98-%EC%84%A0%EC%96%B8-%EB%B0%8F-%ED%95%A0%EB%8B%B9) 포스트에서 다뤘던 내용과 같다.
+변수에 원시 타입 데이터를 할당할 때 메모리 저장 방식은 이전에 [변수의 선언 및 할당](https://amgona-blog.vercel.app/post/dev/javascript-variable) 포스트에서 다뤘던 내용과 같다.
 메모리의 데이터 영역에 고정 크기로 원시 값을 저장하고, 해당 공간을 변수가 직접적으로 가리키는 형태를 띈다.
 
 원시 타입은 모두 불변 값으로서 값이 변하지 않는 **불변성**을 갖고 있다.
