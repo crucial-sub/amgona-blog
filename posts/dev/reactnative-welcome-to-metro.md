@@ -6,7 +6,7 @@ excerpt: 'Metro번들러에 대해 알아보자!'
 thumbnail: '/images/reactnative-welcome-to-metro.webp'
 ---
 
-![터미널](https://github.com/crucial-sub/odot/assets/87363422/48179de4-34d1-485f-8684-59869573abc1)
+![터미널1](https://github.com/crucial-sub/odot/assets/87363422/48179de4-34d1-485f-8684-59869573abc1)
 
 "Welcome to Metro"
 
@@ -55,3 +55,24 @@ Metro는 번들링 이외에도 React Native 개발을 위해 다양한 서비�
 4. **HMR(핫 모듈 리로딩)**
 
    Metro 서버는 개발자가 전체 리로드 없이 실행 중인 애플리케이션에 즉시 반영된 코드 변경 사항을 확인할 수 있는 개발 기능인 HMR(핫 모듈 리로딩)을 지원하여 개발 중에 신속한 피드백을 제공하여 개발자 경험을 향상시킨다.
+
+## Metro 서버를 통한 ios앱 실행 과정
+
+Metro에 대해 얼추 알아보았으니 이제 다시 맨 처음 React Native 실행 사진으로 돌아가보자
+![터미널2](https://github.com/crucial-sub/odot/assets/87363422/ac856d39-6644-4208-a122-54cdca69d7bb)
+
+우리는 처음 프로젝트를 실행하고자 할 때 yarn start cli를 입력하는데
+이를 통해 Metro dev server가 port 8081에 열리는 것을 확인할 수 있다.
+
+![터미널2](https://github.com/crucial-sub/odot/assets/87363422/7a96e42b-07f9-445d-8759-9ad230773fc3)
+
+이후 react native 프로젝트 내부의 ios 폴더로 이동 후
+pod프로그램으로 ios/Podfile 파일을 참조해 원격 저장소에서 빌드시 필요한 패키지를 다운받아 설치한다.
+
+![터미널2](https://github.com/crucial-sub/odot/assets/87363422/2fda3b9e-590a-45d2-bf07-13d076127c07)
+
+yarn ios cli를 입력하면 Xcode가 패키지를 사용해 앱을 빌드하고, 빌드된 앱을 에뮬레이터에 설치하고 실행까지 해준다.
+
+![터미널2](https://github.com/crucial-sub/odot/assets/87363422/0a4e1a6c-15a0-40dd-834b-33510b1691bc)
+
+Metro 서버에서 javascript 코드 번들을 내려받게 되면 최종적으로 앱이 실행된다!
