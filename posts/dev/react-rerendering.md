@@ -22,7 +22,8 @@ React 리렌더링의 핵심 동작 원리를 한 줄로 요약하면 다음과 
 코드 예시를 통해 살펴보자
 
 ```jsx
-export default function App() {
+// App 컴포넌트
+function App() {
   console.log('App 리렌더링 발생')
   return (
     <div>
@@ -31,6 +32,7 @@ export default function App() {
   )
 }
 
+// Counter 컴포넌트
 function Counter() {
   console.log('Counter 리렌더링 발생')
   const [count, setCount] = useState(0)
@@ -43,6 +45,7 @@ function Counter() {
   )
 }
 
+// CountNumber 컴포넌트
 function CountNumber({ count }) {
   console.log('CountNumber 리렌더링 발생')
   return <p>{`Count: ${count}`}</p>
@@ -91,7 +94,7 @@ function CountNumber({ count }) {
 - 위 코드 예시에서 `Counter` 컴포넌트에 props를 전달해주지 않는 `NoPropsChild`컴포넌트를 추가해준 후 살펴보자.
 
 ```jsx
-...
+// Counter 컴포넌트
 function Counter() {
   console.log('Counter 리렌더링 발생')
   const [count, setCount] = useState(0)
@@ -105,6 +108,7 @@ function Counter() {
   )
 }
 
+// NoPropsChild 컴포넌트
 function NoPropsChild() {
   console.log('NoPropsChild 리렌더링 발생')
   return (
